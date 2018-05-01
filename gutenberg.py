@@ -12,7 +12,8 @@ print("Frequency of Sherlock: " + str(wordFreq("Sherlock")))
 print("Frequency of Watson: " + str(wordFreq("Watson")))
 print("Frequency of Elementary: " + str(wordFreq("Elementary")))
 
-#def totalFreq(sequence):
+def totalFreq(sequence):
+    return reduce( lambda a, b: a+b, [wordFreq(a) for a in group] )
 
 def compareFreq(worda, wordb):
     if wordFreq(worda) > wordFreq(wordb):
